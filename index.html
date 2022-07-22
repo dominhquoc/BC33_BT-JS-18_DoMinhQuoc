@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+  <body>
+<div class="container fs-1">
+  <input type="number" id="nhapsodi" placeholder="Nhap so n">
+  <button type="button" onclick="nhapso()" class="my-5">ThemSo</button>
+
+  <div class="alert alert-success" id="inkq"></div>
+</div>
+
+
+  <!-- Bai tap 1: Tổng các số dương trong mảng. -->
+
+  <div class="card text-left container bg-info">
+    <h1 class="fw-bold">Cau 1: Tổng các số dương trong mảng.</h1>
+    <div class="card-body">
+      <button onclick="ex1()" class="fs-3 bg-white py-2 px-5">Click me</button>  <br> 
+        <span class="fw-bold fs-2">Ket qua :</span> <span class="card-title fs-1 fw-bold bg-white" id="ketqua"> </span> 
+    </div>
+  </div>
+  <!-- Bai tap 2: Đếm có bao nhiêu số dương trong mảng. -->
+  <div class="card text-left container bg-danger">
+    <h1 class="fw-bold">Cau 2: Đếm có bao nhiêu số dương trong mảng.</h1>
+    <div class="card-body">
+      <button onclick="ex2()" class="fs-3 bg-white py-2 px-5">Click me</button>  <br>   
+        <span class="fw-bold fs-2">Ket qua :</span> <span class="card-title fs-1 fw-bold bg-white" id="ketqua2"> </span> 
+    </div>
+  </div>
+  <!-- Bai tap 3: Tìm số nhỏ nhất trong mảng. -->
+  <div class="card text-left container bg-warning">
+    <h1 class="fw-bold">Cau 3: Tìm số nhỏ nhất trong mảng .[5, 1, 3, 4, 6]</h1>
+    <div class="card-body">   
+      <button onclick="ex3()" class="fs-3 bg-white py-2 px-5">Click me</button>  <br> 
+        <span class="fw-bold fs-2">Ket qua :</span> <span class="card-title fs-1 fw-bold bg-white" id="ketqua3"> </span> 
+    </div>
+  </div>
+  <!-- Bai tap 4: Tìm số dương nhỏ nhất trong mảng. -->
+  <div class="card text-left container bg-success">
+    <h1 class="fw-bold">Cau 4: Tìm số dương nhỏ nhất trong mảng. [-1, 5, 4, 3, 22]</h1>
+    <div class="card-body">  
+      <button onclick="ex4()" class="fs-3 bg-white py-2 px-5">Click me</button>  <br> 
+        <span class="fw-bold fs-2">Ket qua :</span> <span class="card-title fs-1 fw-bold bg-white" id="ketqua4"> </span> 
+    </div>
+  </div>
+  <!-- Bai 5: Tìm số chẵn cuối cùng trong mảng. Nếu mảng không có giá trị chẵn thì trả về -1. -->
+  <div class="card text-left container bg-secondary">
+    <h1 class="fw-bold">Cau 5: Tìm số chẵn cuối cùng trong mảng. Nếu mảng không có giá trị chẵn thì trả về -1.  [1, 5, 2, 3, 6, 7]</h1>
+    <div class="card-body">  
+      <button onclick="ex5()" class="fs-3 bg-white py-2 px-5">Click me</button>  <br>  
+        <span class="fw-bold fs-2">Ket qua :</span> <span class="card-title fs-1 fw-bold bg-white" id="ketqua5"></span> 
+    </div>
+  </div>
+  <!-- Bai 6:  Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí muốn đổi chỗ giá trị). -->
+  <div class="card text-left container bg-white">
+    <h1 class="fw-bold">Cau 6: Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí muốn đổi chỗ giá trị).  [1, 5, 2, 3, 6, 7]</h1>
+    <h1>Nhap vi tri thu nhat :</h1>
+    <input type="number" id="numberOne" class="w-50 fs-2 mb-4">
+    <h1>Nhap vi tri thu hai :</h1>
+    <input type="number" id="numberTwo" class="w-50 fs-2">
+    
+    <div class="card-body"> 
+      <button onclick="ex6()" class="fs-3 bg-white py-2 px-5">Click me</button>  <br>   
+        <span class="fw-bold fs-2">Ket qua :</span> <span class="card-title fs-1 fw-bold bg-white" id="ketqua6"></span> 
+    </div>
+  </div>
+  <!-- Bai 7. Sắp xếp mảng theo thứ tự tăng dần. -->
+  <div class="card text-left container bg-primary">
+    <h1 class="fw-bold">Cau 7. Sắp xếp mảng theo thứ tự tăng dần..  [1, 5, 2, 3, 6, 7]</h1>
+    <div class="card-body">   
+      <button onclick="ex7()" class="fs-3 bg-white py-2 px-5">Click me</button>  <br>  
+        <span class="fw-bold fs-2">Ket qua :</span> <span class="card-title fs-1 fw-bold bg-white" id="ketqua7"></span> 
+    </div>
+  </div>
+  <!-- Bai 8: Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên tố thì trả về – 1. -->
+  <div class="card text-left container bg-danger">
+    <h1 class="fw-bold">Cau 8. Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên tố thì trả về -1 </h1>
+    <div class="card-body">   
+      <button onclick="ex8()" class="fs-3 bg-white py-2 px-5">Click me</button>  <br>  
+        <span class="fw-bold fs-2">Ket qua :</span> <span class="card-title fs-1 fw-bold bg-white" id="ketqua8"></span> 
+    </div>
+  </div>
+  <!-- Bai 9: Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số nguyên? -->
+  <div class="card text-left container bg-warning">
+    <h1 class="fw-bold">Cau 9. Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số nguyên? [-1, -5, 1.2, 3.5, 2, 3, 6, 7, 0, 5.1, 9.8]</h1>
+    <div class="card-body">  
+      <button onclick="ex9()" class="fs-3 bg-white py-2 px-5">Click me</button>  <br>  
+        <span class="fw-bold fs-2">Ket qua :</span> <span class="card-title fs-1 fw-bold bg-white" id="ketqua9"></span> 
+    </div>
+  </div>
+  <!-- Bai 10: So sanh so am va so duong. -->
+  <div class="card text-left container bg-success">
+    <h1 class="fw-bold">Cau 10. So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn? [-1, -5, 1, -4, 2, 3, 6, 7, 0, 8]</h1>
+    <div class="card-body">
+      <button onclick="ex10()" class="fs-3 bg-white py-2 px-5">Click me</button>  <br>     
+        <span class="fw-bold fs-2">Ket qua :</span> <span class="card-title fs-1 fw-bold bg-white" id="ketqua10"></span> 
+    </div>
+  </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+ <script src="main.js"></script>
+
+</body>
+</html>
